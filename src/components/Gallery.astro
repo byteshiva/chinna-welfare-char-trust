@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+
+// Dynamically load images from the assets folder
+const images = import.meta.glob('/src/assets/gallery/*.{jpg,jpeg,png,gif,webp}', { eager: true });
+
+---
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+<div class="gallery">
+  {Object.entries(images).map(([path, module]) => (
+    <img src={module.default} alt="Gallery Image" />
+  ))}
+</div>
