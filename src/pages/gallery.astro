@@ -1,7 +1,30 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import Gallery from "../components/Gallery.astro";
 ---
 
-<h1>Image Gallery</h1>
-<Gallery />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Welfare Trust</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Image Gallery</h1>
+      <Gallery />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main {
+    padding: 2rem;
+    text-align: center;
+  }
+</style>
 
