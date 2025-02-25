@@ -1,0 +1,40 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welfare Trust</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Welcome to Welfare Trust</h1>
+      <p>We are dedicated to helping those in need. Join us in making a difference.</p>
+      <a href="/donate" class="button">Donate Now</a>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main {
+    padding: 2rem;
+    text-align: center;
+  }
+  .button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0070f3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .button:hover {
+    background-color: #005bb5;
+  }
+</style>
