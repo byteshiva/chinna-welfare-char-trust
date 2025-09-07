@@ -32,22 +32,37 @@
 
 <script>
   // Add active state to current page navigation
-  document.addEventListener('DOMContentLoaded', function() {
+  function setActiveNavigation() {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link');
     
+    // Remove all active classes first
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+    
+    // Add active class to current page
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
       
       // Check if current page matches the link
       if (
         (currentPath === '/' && href === '/') ||
-        (currentPath.startsWith(href) && href !== '/')
+        (currentPath === '/about' && href === '/about') ||
+        (currentPath === '/donate' && href === '/donate') ||
+        (currentPath === '/gallery' && href === '/gallery')
       ) {
         link.classList.add('active');
+        console.log('Active navigation set for:', href);
       }
     });
-  });
+  }
+  
+  // Run on page load
+  document.addEventListener('DOMContentLoaded', setActiveNavigation);
+  
+  // Also run when navigation changes (for SPA-style navigation)
+  window.addEventListener('popstate', setActiveNavigation);
 </script>
 
 <style>
@@ -150,10 +165,12 @@
   }
   
   .nav-link.active {
-    color: var(--primary-color);
-    background-color: var(--neutral-light);
+    color: var(--white) !important;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color)) !important;
     font-weight: 600;
     position: relative;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(44, 122, 123, 0.3);
   }
   
   .nav-link.active::after {
@@ -162,9 +179,9 @@
     bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
-    width: 20px;
+    width: 30px;
     height: 3px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     border-radius: 2px;
   }
   
