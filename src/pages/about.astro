@@ -8,21 +8,420 @@ import Footer from '../components/Footer.astro';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - Welfare Trust</title>
+    <meta name="description" content="Learn about Welfare Trust's mission, values, and commitment to creating positive change in communities worldwide." />
     <link rel="stylesheet" href="/styles/global.css" />
   </head>
   <body>
     <Header />
-    <main>
-      <h1>About Us</h1>
-      <p>Welfare Trust is a non-profit organization dedicated to improving the lives of underprivileged communities.</p>
-    </main>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Our Story of Hope and Action</h1>
+          <p class="hero-subtitle">Founded with a vision to create lasting positive change, Welfare Trust has been a beacon of hope for communities in need for over a decade.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section">
+      <div class="container">
+        <div class="mission-grid">
+          <div class="mission-content">
+            <h2>Our Mission</h2>
+            <p>To empower communities through compassionate action, sustainable support, and meaningful partnerships. We believe that every person deserves the opportunity to thrive, and we work tirelessly to remove barriers and create pathways to success.</p>
+            
+            <h3>Our Core Values</h3>
+            <ul class="values-list">
+              <li><strong>Compassion:</strong> We approach every situation with empathy and understanding</li>
+              <li><strong>Integrity:</strong> We operate with transparency and accountability in all our actions</li>
+              <li><strong>Sustainability:</strong> We focus on long-term solutions that create lasting change</li>
+              <li><strong>Community:</strong> We believe in the power of collective action and partnership</li>
+              <li><strong>Innovation:</strong> We constantly seek new and better ways to serve our communities</li>
+            </ul>
+          </div>
+          <div class="mission-image">
+            <div class="image-placeholder">
+              <span>💚</span>
+              <p>Heart of our Community</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="text-center">Our Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2012</div>
+            <div class="timeline-content">
+              <h3>Foundation</h3>
+              <p>Welfare Trust was founded by a group of passionate individuals committed to addressing social inequality in their local community.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-content">
+              <h3>Expansion</h3>
+              <p>Expanded our programs to include education support and job training, reaching 10 communities across the region.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2018</div>
+            <div class="timeline-content">
+              <h3>Impact Growth</h3>
+              <p>Launched our housing assistance program and reached the milestone of supporting 5,000 individuals and families.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2022</div>
+            <div class="timeline-content">
+              <h3>Innovation</h3>
+              <p>Introduced technology-driven solutions and sustainable development programs, doubling our community reach.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-content">
+              <h3>Today</h3>
+              <p>Serving 50+ communities with 15,000+ lives touched, continuing to grow and adapt to meet evolving needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center">Leadership Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="team-photo">👩‍💼</div>
+            <h3>Sarah Johnson</h3>
+            <p class="team-role">Executive Director</p>
+            <p>20+ years in nonprofit management, passionate about sustainable community development and social justice.</p>
+          </div>
+          <div class="team-member">
+            <div class="team-photo">👨‍💼</div>
+            <h3>Michael Chen</h3>
+            <p class="team-role">Program Director</p>
+            <p>Expert in education and workforce development with a focus on innovative program design and impact measurement.</p>
+          </div>
+          <div class="team-member">
+            <div class="team-photo">👩‍🔬</div>
+            <h3>Dr. Aisha Patel</h3>
+            <p class="team-role">Community Outreach Director</p>
+            <p>Community health specialist with deep expertise in culturally responsive programming and partnership building.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Join Our Mission</h2>
+          <p>Together, we can create a world where every community has the resources and support they need to thrive. Your involvement makes the difference.</p>
+          <div class="cta-actions">
+            <a href="/donate" class="btn btn-primary">Support Our Work</a>
+            <a href="/volunteer" class="btn btn-secondary">Volunteer Today</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <Footer />
   </body>
 </html>
 
 <style>
-  main {
-    padding: 2rem;
+  .hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: var(--white);
+    padding: 4rem 0;
     text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .mission-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mission-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+
+  .values-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .values-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--neutral-medium);
+  }
+
+  .values-list li:last-child {
+    border-bottom: none;
+  }
+
+  .values-list strong {
+    color: var(--primary-color);
+  }
+
+  .mission-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-placeholder {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .image-placeholder span {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-placeholder p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+  }
+
+  .timeline {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .timeline-item:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  .timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .timeline-year {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+    z-index: 2;
+    position: relative;
+  }
+
+  .timeline-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin: 0 2rem;
+    flex: 1;
+    max-width: 350px;
+  }
+
+  .timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .team-member {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .team-photo {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .team-member h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .team-role {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--neutral-dark) 0%, var(--primary-color) 100%);
+    color: var(--white);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-actions .btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+  }
+
+  .cta-actions .btn:hover {
+    background-color: var(--neutral-light);
+    transform: translateY(-2px);
+  }
+
+  .cta-actions .btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+  }
+
+  .cta-actions .btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .mission-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .timeline::before {
+      left: 30px;
+    }
+
+    .timeline-item {
+      flex-direction: row !important;
+      align-items: flex-start;
+    }
+
+    .timeline-year {
+      position: absolute;
+      left: 0;
+      margin-top: 0.5rem;
+    }
+
+    .timeline-content {
+      margin-left: 80px;
+      margin-right: 0;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .image-placeholder {
+      width: 200px;
+      height: 200px;
+    }
+
+    .image-placeholder span {
+      font-size: 3rem;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 </style>

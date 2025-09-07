@@ -1,31 +1,151 @@
 ---
-import { getCollection } from 'astro:content';
-
-// Dynamically load images from the assets folder
-const images = import.meta.glob('/src/assets/gallery/*.{jpg,jpeg,png,gif,webp}', { eager: true });
-
+// Create placeholder gallery items since no images are available
+const placeholderItems = [
+  { category: 'education', icon: '📚', title: 'Education Program', description: 'Students receiving educational support' },
+  { category: 'housing', icon: '🏠', title: 'Housing Initiative', description: 'Family moving into new home' },
+  { category: 'food', icon: '🍽️', title: 'Community Kitchen', description: 'Volunteers serving meals' },
+  { category: 'events', icon: '🎉', title: 'Community Event', description: 'Annual fundraising gathering' },
+  { category: 'volunteers', icon: '🤝', title: 'Volunteer Team', description: 'Dedicated volunteers at work' },
+  { category: 'education', icon: '🎓', title: 'Graduation Day', description: 'Scholarship recipients graduating' },
+  { category: 'housing', icon: '🔨', title: 'Home Repair', description: 'Community helping rebuild homes' },
+  { category: 'food', icon: '🥗', title: 'Nutrition Program', description: 'Teaching healthy cooking skills' },
+  { category: 'events', icon: '🏃‍♀️', title: 'Charity Run', description: 'Community participation in fundraising' },
+  { category: 'volunteers', icon: '👥', title: 'Team Building', description: 'Volunteers training together' },
+  { category: 'education', icon: '📖', title: 'Reading Program', description: 'Children learning to read' },
+  { category: 'housing', icon: '🗝️', title: 'Key Ceremony', description: 'Families receiving home keys' }
+];
 ---
 
 <style>
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
   }
-  .gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+  
+  .gallery-item {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
-  .gallery img:hover {
-    transform: scale(1.05);
+  
+  .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .gallery-image {
+    height: 200px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gallery-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+      rgba(44, 122, 123, 0.8) 0%, 
+      rgba(56, 161, 105, 0.6) 50%, 
+      rgba(245, 101, 101, 0.4) 100%);
+    z-index: 1;
+  }
+  
+  .gallery-image span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .gallery-content {
+    padding: 1.5rem;
+  }
+  
+  .gallery-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .gallery-description {
+    color: var(--neutral-dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .gallery-category {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .gallery-item[data-category="education"] .gallery-image {
+    background: linear-gradient(135deg, var(--primary-color), #4299e1);
+  }
+  
+  .gallery-item[data-category="housing"] .gallery-image {
+    background: linear-gradient(135deg, var(--accent-color), #48bb78);
+  }
+  
+  .gallery-item[data-category="food"] .gallery-image {
+    background: linear-gradient(135deg, var(--secondary-color), #ed8936);
+  }
+  
+  .gallery-item[data-category="events"] .gallery-image {
+    background: linear-gradient(135deg, #9f7aea, var(--primary-color));
+  }
+  
+  .gallery-item[data-category="volunteers"] .gallery-image {
+    background: linear-gradient(135deg, #38b2ac, var(--accent-color));
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .gallery-image {
+      height: 180px;
+      font-size: 2.5rem;
+    }
+    
+    .gallery-content {
+      padding: 1.25rem;
+    }
   }
 </style>
 
 <div class="gallery">
-  {Object.entries(images).map(([path, module]) => (
-    <img src={module.default} alt="Gallery Image" />
+  {placeholderItems.map((item) => (
+    <div class="gallery-item" data-category={item.category}>
+      <div class="gallery-image">
+        <span>{item.icon}</span>
+      </div>
+      <div class="gallery-content">
+        <h3 class="gallery-title">{item.title}</h3>
+        <p class="gallery-description">{item.description}</p>
+        <span class="gallery-category">{item.category}</span>
+      </div>
+    </div>
   ))}
 </div>

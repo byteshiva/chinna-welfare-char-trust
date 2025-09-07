@@ -9,22 +9,302 @@ import Gallery from "../components/Gallery.astro";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery - Welfare Trust</title>
+    <meta name="description" content="See the impact of Welfare Trust's work through our gallery of community programs, events, and the lives we've touched together." />
     <link rel="stylesheet" href="/styles/global.css" />
   </head>
   <body>
     <Header />
-    <main>
-      <h1>Image Gallery</h1>
-      <Gallery />
-    </main>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Stories of Impact</h1>
+          <p class="hero-subtitle">Witness the power of community support through photos and stories from our programs, events, and the lives we've transformed together.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Categories -->
+    <section class="section">
+      <div class="container">
+        <div class="gallery-categories">
+          <button class="category-btn active" data-category="all">All Photos</button>
+          <button class="category-btn" data-category="education">Education</button>
+          <button class="category-btn" data-category="housing">Housing</button>
+          <button class="category-btn" data-category="food">Food Programs</button>
+          <button class="category-btn" data-category="events">Community Events</button>
+          <button class="category-btn" data-category="volunteers">Volunteers</button>
+        </div>
+        
+        <Gallery />
+      </div>
+    </section>
+
+    <!-- Impact Stories -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="text-center">Featured Stories</h2>
+        <div class="stories-grid">
+          <div class="story-card">
+            <div class="story-image">
+              <div class="story-placeholder">
+                <span>🎓</span>
+              </div>
+            </div>
+            <div class="story-content">
+              <h3>Maria's Education Journey</h3>
+              <p>With support from our scholarship program, Maria became the first in her family to graduate college and now works as a community health educator.</p>
+              <span class="story-category">Education Support</span>
+            </div>
+          </div>
+          
+          <div class="story-card">
+            <div class="story-image">
+              <div class="story-placeholder">
+                <span>🏠</span>
+              </div>
+            </div>
+            <div class="story-content">
+              <h3>The Johnson Family Home</h3>
+              <p>After losing their home to a fire, our emergency housing program helped the Johnson family get back on their feet and find permanent housing.</p>
+              <span class="story-category">Housing Assistance</span>
+            </div>
+          </div>
+          
+          <div class="story-card">
+            <div class="story-image">
+              <div class="story-placeholder">
+                <span>🍽️</span>
+              </div>
+            </div>
+            <div class="story-content">
+              <h3>Community Kitchen Initiative</h3>
+              <p>Our community kitchen now serves over 500 meals weekly, bringing neighbors together while addressing food insecurity in our area.</p>
+              <span class="story-category">Food Security</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Be Part of Our Story</h2>
+          <p>Every photo represents lives changed, hope restored, and communities strengthened. Your involvement helps us create more stories like these.</p>
+          <div class="cta-actions">
+            <a href="/donate" class="btn btn-primary">Support Our Work</a>
+            <a href="/volunteer" class="btn btn-secondary">Join Our Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <Footer />
   </body>
 </html>
 
 <style>
-  main {
-    padding: 2rem;
+  .hero-section {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+    color: var(--white);
+    padding: 4rem 0;
     text-align: center;
   }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .gallery-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .category-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background: var(--white);
+    color: var(--primary-color);
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .category-btn:hover,
+  .category-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+  }
+
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .story-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .story-image {
+    height: 200px;
+    background: var(--neutral-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .story-placeholder {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 2.5rem;
+  }
+
+  .story-content {
+    padding: 2rem;
+  }
+
+  .story-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .story-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .story-category {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--neutral-dark) 0%, var(--primary-color) 100%);
+    color: var(--white);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-actions .btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+  }
+
+  .cta-actions .btn:hover {
+    background-color: var(--neutral-light);
+    transform: translateY(-2px);
+  }
+
+  .cta-actions .btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+  }
+
+  .cta-actions .btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .gallery-categories {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stories-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 </style>
+
+<script>
+  // Add interactivity to gallery categories
+  document.addEventListener('DOMContentLoaded', function() {
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Here you would filter the gallery items based on the selected category
+        const category = this.dataset.category;
+        console.log('Filtering gallery by category:', category);
+      });
+    });
+  });
+</script>
 

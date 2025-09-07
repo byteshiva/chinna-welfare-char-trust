@@ -8,33 +8,517 @@ import Footer from '../components/Footer.astro';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate - Welfare Trust</title>
+    <meta name="description" content="Support Welfare Trust's mission to empower communities. Your donation creates lasting positive change in the lives of those who need it most." />
     <link rel="stylesheet" href="/styles/global.css" />
   </head>
   <body>
     <Header />
-    <main>
-      <h1>Donate to Welfare Trust</h1>
-      <p>Your contribution can make a difference. Click the button below to donate.</p>
-      <a href="https://paypal.com/your-donation-link" class="button" target="_blank">Donate Now</a>
-    </main>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Your Generosity Changes Lives</h1>
+          <p class="hero-subtitle">Every donation, no matter the size, has the power to transform communities and create lasting positive change. Join thousands of supporters who are making a difference.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center">See Your Impact</h2>
+        <div class="impact-examples">
+          <div class="impact-item">
+            <div class="impact-amount">$25</div>
+            <div class="impact-icon">📚</div>
+            <h3>School Supplies</h3>
+            <p>Provides a complete set of school supplies for one child for an entire semester</p>
+          </div>
+          <div class="impact-item">
+            <div class="impact-amount">$50</div>
+            <div class="impact-icon">🍽️</div>
+            <h3>Family Meals</h3>
+            <p>Supplies nutritious meals for a family of four for one week</p>
+          </div>
+          <div class="impact-item">
+            <div class="impact-amount">$100</div>
+            <div class="impact-icon">🏠</div>
+            <h3>Emergency Housing</h3>
+            <p>Covers emergency housing assistance for a family for one night</p>
+          </div>
+          <div class="impact-item">
+            <div class="impact-amount">$250</div>
+            <div class="impact-icon">💼</div>
+            <h3>Job Training</h3>
+            <p>Funds job training and certification programs for one individual</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation Form Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="donation-container">
+          <div class="donation-form">
+            <h2>Make Your Donation</h2>
+            <p>Choose an amount or enter a custom donation. Every contribution makes a difference.</p>
+            
+            <div class="donation-amounts">
+              <button class="amount-btn" data-amount="25">$25</button>
+              <button class="amount-btn" data-amount="50">$50</button>
+              <button class="amount-btn" data-amount="100">$100</button>
+              <button class="amount-btn" data-amount="250">$250</button>
+              <button class="amount-btn" data-amount="500">$500</button>
+              <button class="amount-btn" data-amount="1000">$1000</button>
+            </div>
+            
+            <div class="custom-amount">
+              <label for="custom-amount">Custom Amount ($)</label>
+              <input type="number" id="custom-amount" placeholder="Enter amount" min="1" />
+            </div>
+            
+            <div class="donation-type">
+              <h3>Donation Type</h3>
+              <div class="donation-options">
+                <label class="radio-option">
+                  <input type="radio" name="donation-type" value="one-time" checked />
+                  <span>One-time donation</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="donation-type" value="monthly" />
+                  <span>Monthly recurring donation</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="donation-purpose">
+              <label for="purpose">Donation Purpose (Optional)</label>
+              <select id="purpose">
+                <option value="">Where most needed</option>
+                <option value="education">Education Support</option>
+                <option value="housing">Housing Assistance</option>
+                <option value="food">Food Security</option>
+                <option value="job-training">Job Training</option>
+                <option value="emergency">Emergency Relief</option>
+              </select>
+            </div>
+            
+            <button class="btn btn-primary donation-btn">Donate Securely</button>
+            
+            <div class="security-info">
+              <p><strong>🔒 Your donation is secure.</strong> We use industry-standard encryption to protect your information.</p>
+              <p><strong>📋 Tax deductible.</strong> Welfare Trust is a 501(c)(3) organization. You will receive a receipt for tax purposes.</p>
+            </div>
+          </div>
+          
+          <div class="donation-info">
+            <div class="info-card">
+              <h3>Why Donate to Welfare Trust?</h3>
+              <ul>
+                <li>✓ <strong>92%</strong> of donations go directly to programs</li>
+                <li>✓ <strong>Transparent</strong> reporting on all fund usage</li>
+                <li>✓ <strong>Proven impact</strong> with measurable results</li>
+                <li>✓ <strong>Local focus</strong> supporting your community</li>
+                <li>✓ <strong>Tax deductible</strong> 501(c)(3) organization</li>
+              </ul>
+            </div>
+            
+            <div class="info-card">
+              <h3>Other Ways to Help</h3>
+              <div class="help-options">
+                <a href="/volunteer" class="help-link">
+                  <span>🙋‍♀️</span>
+                  <div>
+                    <strong>Volunteer</strong>
+                    <p>Donate your time and skills</p>
+                  </div>
+                </a>
+                <a href="/events" class="help-link">
+                  <span>🎉</span>
+                  <div>
+                    <strong>Fundraise</strong>
+                    <p>Organize an event or campaign</p>
+                  </div>
+                </a>
+                <a href="/corporate" class="help-link">
+                  <span>🏢</span>
+                  <div>
+                    <strong>Corporate Partnership</strong>
+                    <p>Partner with us as a business</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center">What Our Supporters Say</h2>
+        <div class="testimonials">
+          <div class="testimonial">
+            <div class="quote">"Knowing that my monthly donation helps provide education for children in my community gives me such joy. The transparency and regular updates make me confident my money is making a real difference."</div>
+            <div class="author">- Maria Rodriguez, Monthly Donor</div>
+          </div>
+          <div class="testimonial">
+            <div class="quote">"I started volunteering and was so impressed by the organization that I became a major donor. Their efficiency and genuine care for the community is remarkable."</div>
+            <div class="author">- David Kim, Major Donor & Volunteer</div>
+          </div>
+          <div class="testimonial">
+            <div class="quote">"As a small business owner, I appreciate how Welfare Trust helps our local community thrive. Their job training program helped several of my employees get started."</div>
+            <div class="author">- Jennifer Taylor, Corporate Partner</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <Footer />
   </body>
 </html>
 
 <style>
-  main {
-    padding: 2rem;
+  .hero-section {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: var(--white);
+    padding: 4rem 0;
     text-align: center;
   }
-  .button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #0070f3;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
   }
-  .button:hover {
-    background-color: #005bb5;
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .impact-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .impact-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .impact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .impact-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+
+  .impact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .impact-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .donation-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .donation-form {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .donation-form h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .donation-amounts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .amount-btn {
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+    background: var(--white);
+    color: var(--primary-color);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .amount-btn:hover,
+  .amount-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+  }
+
+  .custom-amount {
+    margin: 2rem 0;
+  }
+
+  .custom-amount label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--neutral-dark);
+  }
+
+  .custom-amount input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--neutral-medium);
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  .custom-amount input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+
+  .donation-type {
+    margin: 2rem 0;
+  }
+
+  .donation-type h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+  }
+
+  .donation-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .radio-option input {
+    margin: 0;
+  }
+
+  .donation-purpose {
+    margin: 2rem 0;
+  }
+
+  .donation-purpose label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--neutral-dark);
+  }
+
+  .donation-purpose select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--neutral-medium);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--white);
+  }
+
+  .donation-purpose select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+
+  .donation-btn {
+    width: 100%;
+    padding: 1.25rem;
+    font-size: 1.25rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .security-info {
+    padding: 1.5rem;
+    background: var(--neutral-light);
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+
+  .security-info p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--neutral-dark);
+  }
+
+  .donation-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .info-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+
+  .info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .info-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .info-card li {
+    padding: 0.5rem 0;
+    color: var(--neutral-dark);
+  }
+
+  .help-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .help-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--neutral-light);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--neutral-dark);
+    transition: all 0.3s ease;
+  }
+
+  .help-link:hover {
+    background: var(--neutral-medium);
+    transform: translateX(5px);
+  }
+
+  .help-link span {
+    font-size: 2rem;
+  }
+
+  .help-link strong {
+    color: var(--primary-color);
+  }
+
+  .help-link p {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    color: var(--neutral-dark);
+  }
+
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .testimonial {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent-color);
+  }
+
+  .quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--neutral-dark);
+  }
+
+  .author {
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .donation-container {
+      grid-template-columns: 1fr;
+    }
+
+    .donation-form {
+      padding: 2rem;
+    }
+
+    .donation-amounts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .impact-examples {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonials {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
+
+<script>
+  // Add interactivity to donation amounts
+  document.addEventListener('DOMContentLoaded', function() {
+    const amountBtns = document.querySelectorAll('.amount-btn');
+    const customInput = document.getElementById('custom-amount');
+    
+    amountBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        amountBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        customInput.value = this.dataset.amount;
+      });
+    });
+    
+    customInput.addEventListener('input', function() {
+      amountBtns.forEach(b => b.classList.remove('active'));
+    });
+  });
+</script>
