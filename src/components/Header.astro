@@ -19,13 +19,11 @@
       <nav class="main-nav">
         <a href="/" class="nav-link" data-page="home">Home</a>
         <a href="/about" class="nav-link" data-page="about">About</a>
-        <a href="/donate" class="nav-link donate-btn" data-page="donate">Donate</a>
+        <a href="/events" class="nav-link" data-page="events">Events</a>
         <a href="/gallery" class="nav-link" data-page="gallery">Gallery</a>
+        <a href="/volunteer" class="nav-link" data-page="volunteer">Volunteer</a>
+        <a href="/donate" class="nav-link donate-btn" data-page="donate">Donate</a>
       </nav>
-      
-      <div class="header-cta">
-        <a href="/volunteer" class="volunteer-btn">Volunteer</a>
-      </div>
     </div>
   </div>
 </header>
@@ -51,7 +49,8 @@
         (currentPath === '/about' && href === '/about') ||
         (currentPath === '/donate' && href === '/donate') ||
         (currentPath === '/gallery' && href === '/gallery') ||
-        (currentPath === '/volunteer' && href === '/volunteer')
+        (currentPath === '/volunteer' && href === '/volunteer') ||
+        (currentPath === '/events' && href === '/events')
       ) {
         link.classList.add('active');
         console.log('Active navigation set for:', href);
@@ -211,34 +210,7 @@
     background: var(--white);
   }
   
-  .header-cta {
-    display: flex;
-    align-items: center;
-  }
   
-  .volunteer-btn {
-    padding: 0.75rem 1.5rem;
-    background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .volunteer-btn:hover {
-    background: var(--primary-color);
-    color: var(--white);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(44, 122, 123, 0.3);
-  }
-  
-  @media (max-width: 1024px) {
-    .header-cta {
-      display: none;
-    }
-  }
   
   @media (max-width: 768px) {
     .header-content {
@@ -285,8 +257,10 @@
     
     .nav-link.donate-btn {
       margin-left: 0;
-      order: -1;
-      margin-bottom: 0.5rem;
+      order: 10;
+      margin-top: 0.5rem;
+      width: 100%;
+      text-align: center;
     }
   }
 </style>
