@@ -1,20 +1,153 @@
 ---
 ---
 <footer>
-  <p>&copy; 2025 Welfare Trust. All rights reserved.</p>
-  <p>Contact us: <a href="mailto:info@welfaretrust.org">info@welfaretrust.org</a></p>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Our Mission</h3>
+        <p>Empowering communities through compassionate action, sustainable support, and meaningful partnerships to create lasting positive change.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Get Involved</h3>
+        <ul class="footer-links">
+          <li><a href="/donate">Make a Donation</a></li>
+          <li><a href="/volunteer">Volunteer</a></li>
+          <li><a href="/events">Upcoming Events</a></li>
+          <li><a href="/newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <div class="contact-info">
+          <p><strong>Email:</strong> <a href="mailto:info@welfaretrust.org">info@welfaretrust.org</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+1234567890">(123) 456-7890</a></p>
+          <p><strong>Address:</strong> 123 Hope Street<br>Community City, CC 12345</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Welfare Trust. All rights reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+      <div class="social-links">
+        <span>Follow us:</span>
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="Instagram">📷</a>
+        <a href="#" aria-label="LinkedIn">💼</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <style>
   footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f8f8f8;
-    border-top: 1px solid #ddd;
-    margin-top: 2rem;
+    background: linear-gradient(135deg, var(--neutral-dark) 0%, #1a202c 100%);
+    color: var(--white);
+    margin-top: 4rem;
   }
-  footer a {
-    color: #0070f3;
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0 2rem;
+  }
+  
+  .footer-section h3 {
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .footer-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--accent-color);
+  }
+  
+  .contact-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .footer-bottom a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .social-links a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 </style>
