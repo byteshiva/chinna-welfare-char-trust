@@ -1,0 +1,577 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter - Chinnayan Welfare and Charitable Trust</title>
+    <meta name="description" content="Subscribe to our newsletter and stay updated with the latest news, events, and impact stories from Chinnayan Welfare and Charitable Trust." />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Stay Connected with Our Newsletter</h1>
+          <p class="hero-subtitle">Get the latest updates on our programs, success stories, upcoming events, and ways to make a difference in your community.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="section">
+      <div class="container">
+        <div class="newsletter-signup">
+          <div class="signup-content">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Join our community and receive weekly updates delivered straight to your inbox. Be the first to know about new programs, volunteer opportunities, and inspiring stories from those we serve.</p>
+            
+            <div class="benefits-list">
+              <div class="benefit">
+                <span class="benefit-icon">📧</span>
+                <div>
+                  <h4>Weekly Updates</h4>
+                  <p>Regular updates on our programs and community impact</p>
+                </div>
+              </div>
+              <div class="benefit">
+                <span class="benefit-icon">🎉</span>
+                <div>
+                  <h4>Event Announcements</h4>
+                  <p>Early access to event registrations and special announcements</p>
+                </div>
+              </div>
+              <div class="benefit">
+                <span class="benefit-icon">❤️</span>
+                <div>
+                  <h4>Impact Stories</h4>
+                  <p>Heartwarming stories from beneficiaries and volunteers</p>
+                </div>
+              </div>
+              <div class="benefit">
+                <span class="benefit-icon">🤝</span>
+                <div>
+                  <h4>Volunteer Opportunities</h4>
+                  <p>Special volunteer opportunities and community service projects</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="signup-form">
+            <h3>Join Our Community</h3>
+            <form>
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="interests">What interests you most? (Select all that apply)</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests[]" value="education" />
+                    <span class="checkmark"></span>
+                    Education Programs
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests[]" value="community" />
+                    <span class="checkmark"></span>
+                    Community Events
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests[]" value="volunteer" />
+                    <span class="checkmark"></span>
+                    Volunteer Opportunities
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests[]" value="fundraising" />
+                    <span class="checkmark"></span>
+                    Fundraising Events
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests[]" value="success" />
+                    <span class="checkmark"></span>
+                    Success Stories
+                  </label>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="frequency">How often would you like to hear from us?</label>
+                <select id="frequency" name="frequency">
+                  <option value="weekly">Weekly (Recommended)</option>
+                  <option value="biweekly">Bi-weekly</option>
+                  <option value="monthly">Monthly</option>
+                  <option value="events">Events Only</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label class="checkbox-label agreement">
+                  <input type="checkbox" name="agreement" required />
+                  <span class="checkmark"></span>
+                  I agree to receive newsletters and understand I can unsubscribe at any time. See our <a href="/privacy-policy">Privacy Policy</a>.
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Subscribe to Newsletter</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Archive -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="text-center">Recent Newsletters</h2>
+        <p class="section-subtitle">Catch up on what you might have missed</p>
+        
+        <div class="newsletter-archive">
+          <div class="newsletter-item">
+            <div class="newsletter-date">
+              <span class="month">Jan</span>
+              <span class="day">08</span>
+              <span class="year">2025</span>
+            </div>
+            <div class="newsletter-content">
+              <h3>New Year, New Opportunities to Serve</h3>
+              <p>Welcome to 2025! Read about our exciting new programs, volunteer opportunities, and the impact we made in 2024 thanks to your support.</p>
+              <div class="newsletter-highlights">
+                <span class="highlight">2024 Impact Report</span>
+                <span class="highlight">New Volunteer Roles</span>
+                <span class="highlight">Upcoming Events</span>
+              </div>
+              <a href="#" class="read-more">Read Full Newsletter</a>
+            </div>
+          </div>
+
+          <div class="newsletter-item">
+            <div class="newsletter-date">
+              <span class="month">Jan</span>
+              <span class="day">01</span>
+              <span class="year">2025</span>
+            </div>
+            <div class="newsletter-content">
+              <h3>Holiday Season Impact & Thank You</h3>
+              <p>A special thank you to all our volunteers and donors who made the holiday season magical for countless families in our community.</p>
+              <div class="newsletter-highlights">
+                <span class="highlight">Holiday Program Results</span>
+                <span class="highlight">Volunteer Spotlight</span>
+                <span class="highlight">January Preview</span>
+              </div>
+              <a href="#" class="read-more">Read Full Newsletter</a>
+            </div>
+          </div>
+
+          <div class="newsletter-item">
+            <div class="newsletter-date">
+              <span class="month">Dec</span>
+              <span class="day">18</span>
+              <span class="year">2024</span>
+            </div>
+            <div class="newsletter-content">
+              <h3>Education Program Success Stories</h3>
+              <p>Meet some of the amazing students who have thrived in our tutoring programs and see how your support is changing lives.</p>
+              <div class="newsletter-highlights">
+                <span class="highlight">Student Success Stories</span>
+                <span class="highlight">Tutor Recognition</span>
+                <span class="highlight">Program Expansion</span>
+              </div>
+              <a href="#" class="read-more">Read Full Newsletter</a>
+            </div>
+          </div>
+
+          <div class="newsletter-item">
+            <div class="newsletter-date">
+              <span class="month">Dec</span>
+              <span class="day">11</span>
+              <span class="year">2024</span>
+            </div>
+            <div class="newsletter-content">
+              <h3>Community Thanksgiving Celebration Recap</h3>
+              <p>Over 500 community members came together for our annual Thanksgiving celebration. See photos and stories from this heartwarming event.</p>
+              <div class="newsletter-highlights">
+                <span class="highlight">Event Photos</span>
+                <span class="highlight">Community Stories</span>
+                <span class="highlight">Volunteer Thanks</span>
+              </div>
+              <a href="#" class="read-more">Read Full Newsletter</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="archive-footer">
+          <p>Looking for older newsletters? <a href="#" class="archive-link">View Complete Archive</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Stats -->
+    <section class="section">
+      <div class="container">
+        <div class="stats-container">
+          <h2 class="text-center">Join Our Growing Community</h2>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">2,500+</div>
+              <div class="stat-label">Newsletter Subscribers</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">95%</div>
+              <div class="stat-label">Open Rate</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">52</div>
+              <div class="stat-label">Newsletters Sent in 2024</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">4.8★</div>
+              <div class="stat-label">Average Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .hero-section {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .newsletter-signup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .benefits-list {
+    margin-top: 2rem;
+  }
+
+  .benefit {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .benefit-icon {
+    font-size: 2rem;
+    background: var(--neutral-light);
+    padding: 0.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+  }
+
+  .benefit h4 {
+    margin: 0 0 0.3rem;
+    color: var(--primary-color);
+  }
+
+  .benefit p {
+    margin: 0;
+    color: var(--neutral-dark);
+    font-size: 0.9rem;
+  }
+
+  .signup-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .signup-form h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--neutral-dark);
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--neutral-medium);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+
+  .checkbox-group {
+    margin-top: 0.5rem;
+  }
+
+  .checkbox-label {
+    display: flex !important;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem !important;
+    cursor: pointer;
+    font-weight: 400 !important;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: auto !important;
+    margin: 0;
+  }
+
+  .checkbox-label.agreement {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  .checkbox-label.agreement a {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  .newsletter-archive {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .newsletter-item {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+
+  .newsletter-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .newsletter-date {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    text-align: center;
+  }
+
+  .newsletter-date .month {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .newsletter-date .day {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0.2rem 0;
+  }
+
+  .newsletter-date .year {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .newsletter-content {
+    padding: 1.5rem;
+    flex: 1;
+  }
+
+  .newsletter-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .newsletter-content p {
+    color: var(--neutral-dark);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .newsletter-highlights {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .highlight {
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .read-more {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .read-more:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+  }
+
+  .archive-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--neutral-medium);
+  }
+
+  .archive-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .archive-link:hover {
+    text-decoration: underline;
+  }
+
+  .stats-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .stat-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    color: var(--neutral-dark);
+    font-weight: 500;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: var(--neutral-dark);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .newsletter-signup {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .newsletter-item {
+      flex-direction: column;
+    }
+
+    .newsletter-date {
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+      min-width: auto;
+      padding: 1rem 1.5rem;
+    }
+
+    .newsletter-date .day {
+      font-size: 1.5rem;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter-highlights {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
