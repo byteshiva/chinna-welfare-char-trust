@@ -1,0 +1,531 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer - Chinnayan Welfare and Charitable Trust</title>
+    <meta name="description" content="Join Chinnayan Welfare and Charitable Trust as a volunteer. Make a meaningful impact in your community through our various volunteer programs and opportunities." />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Join Our Mission as a Volunteer</h1>
+          <p class="hero-subtitle">Make a meaningful impact in your community. Whether you have a few hours a week or want to get deeply involved, there's a place for you on our team.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Volunteer Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center">Why Volunteer With Us?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">💝</div>
+            <h3>Make Real Impact</h3>
+            <p>See the direct results of your efforts in the lives of individuals and families in our community.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <h3>Build Connections</h3>
+            <p>Meet like-minded people who share your passion for making a positive difference.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📈</div>
+            <h3>Develop Skills</h3>
+            <p>Gain valuable experience and develop new skills while contributing to meaningful causes.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">❤️</div>
+            <h3>Personal Fulfillment</h3>
+            <p>Experience the joy and satisfaction that comes from helping others and serving your community.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volunteer Opportunities -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="text-center">Volunteer Opportunities</h2>
+        <div class="opportunities-grid">
+          <div class="opportunity-card">
+            <div class="opportunity-header">
+              <span class="opportunity-icon">🎓</span>
+              <h3>Education Support</h3>
+            </div>
+            <div class="opportunity-content">
+              <p><strong>What you'll do:</strong> Tutor students, assist with homework, organize educational activities</p>
+              <p><strong>Time commitment:</strong> 2-4 hours per week</p>
+              <p><strong>Skills needed:</strong> Patience, good communication, subject knowledge</p>
+              <div class="opportunity-actions">
+                <span class="urgency high">High Need</span>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="opportunity-card">
+            <div class="opportunity-header">
+              <span class="opportunity-icon">🍽️</span>
+              <h3>Food Program Assistant</h3>
+            </div>
+            <div class="opportunity-content">
+              <p><strong>What you'll do:</strong> Help prepare and serve meals, organize food drives, manage inventory</p>
+              <p><strong>Time commitment:</strong> 3-6 hours per week</p>
+              <p><strong>Skills needed:</strong> Teamwork, basic food handling, organizational skills</p>
+              <div class="opportunity-actions">
+                <span class="urgency medium">Moderate Need</span>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="opportunity-card">
+            <div class="opportunity-header">
+              <span class="opportunity-icon">📋</span>
+              <h3>Administrative Support</h3>
+            </div>
+            <div class="opportunity-content">
+              <p><strong>What you'll do:</strong> Data entry, filing, phone support, event coordination</p>
+              <p><strong>Time commitment:</strong> 2-5 hours per week</p>
+              <p><strong>Skills needed:</strong> Computer literacy, attention to detail, communication</p>
+              <div class="opportunity-actions">
+                <span class="urgency medium">Moderate Need</span>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="opportunity-card">
+            <div class="opportunity-header">
+              <span class="opportunity-icon">🎉</span>
+              <h3>Event Coordination</h3>
+            </div>
+            <div class="opportunity-content">
+              <p><strong>What you'll do:</strong> Plan fundraising events, coordinate community gatherings, manage logistics</p>
+              <p><strong>Time commitment:</strong> 4-8 hours per week</p>
+              <p><strong>Skills needed:</strong> Organization, creativity, project management</p>
+              <div class="opportunity-actions">
+                <span class="urgency low">As Needed</span>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volunteer Application -->
+    <section class="section">
+      <div class="container">
+        <div class="application-container">
+          <div class="application-info">
+            <h2>Ready to Get Started?</h2>
+            <p>Join our team of dedicated volunteers and start making a difference today. The application process is simple and straightforward.</p>
+            
+            <div class="process-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Fill Out Application</h4>
+                  <p>Complete our volunteer application form with your interests and availability.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Interview & Orientation</h4>
+                  <p>Meet with our volunteer coordinator and learn about our programs.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Start Volunteering</h4>
+                  <p>Begin your volunteer journey and start making an impact!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="application-form">
+            <h3>Volunteer Application</h3>
+            <form>
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+              
+              <div class="form-group">
+                <label for="interests">Areas of Interest</label>
+                <select id="interests" name="interests" multiple>
+                  <option value="education">Education Support</option>
+                  <option value="food">Food Programs</option>
+                  <option value="admin">Administrative Support</option>
+                  <option value="events">Event Coordination</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="availability">Availability</label>
+                <textarea id="availability" name="availability" placeholder="Please describe your general availability (days/times)"></textarea>
+              </div>
+              
+              <div class="form-group">
+                <label for="experience">Relevant Experience</label>
+                <textarea id="experience" name="experience" placeholder="Tell us about any relevant volunteer or professional experience"></textarea>
+              </div>
+              
+              <div class="form-group">
+                <label for="motivation">Why do you want to volunteer with us?</label>
+                <textarea id="motivation" name="motivation" placeholder="Share what motivates you to volunteer"></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact for Questions -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Have Questions?</h2>
+          <p>Our volunteer coordinator is here to help you find the perfect opportunity that matches your skills and interests.</p>
+          <div class="cta-actions">
+            <a href="/contact" class="btn btn-primary">Contact Us</a>
+            <a href="/donate" class="btn btn-secondary">Donate Instead</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .hero-section {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .benefit-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .benefit-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .opportunity-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .opportunity-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .opportunity-header {
+    background: var(--neutral-light);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .opportunity-icon {
+    font-size: 2rem;
+  }
+
+  .opportunity-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+  }
+
+  .opportunity-content {
+    padding: 1.5rem;
+  }
+
+  .opportunity-content p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .opportunity-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+
+  .urgency {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .urgency.high {
+    background: var(--secondary-color);
+    color: var(--white);
+  }
+
+  .urgency.medium {
+    background: #ed8936;
+    color: var(--white);
+  }
+
+  .urgency.low {
+    background: var(--neutral-medium);
+    color: var(--neutral-dark);
+  }
+
+  .application-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .process-steps {
+    margin-top: 2rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .step-content h4 {
+    margin: 0 0 0.5rem;
+    color: var(--primary-color);
+  }
+
+  .step-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--neutral-dark);
+  }
+
+  .application-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .application-form h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--neutral-dark);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--neutral-medium);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+
+  .form-group textarea {
+    height: 100px;
+    resize: vertical;
+  }
+
+  .form-group select[multiple] {
+    height: 120px;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--neutral-dark) 0%, var(--primary-color) 100%);
+    color: var(--white);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-actions .btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+  }
+
+  .cta-actions .btn:hover {
+    background-color: var(--neutral-light);
+    transform: translateY(-2px);
+  }
+
+  .cta-actions .btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+  }
+
+  .cta-actions .btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .application-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .opportunities-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .opportunity-actions {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
